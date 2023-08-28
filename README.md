@@ -11,7 +11,7 @@ npm install tiptap-extension-upload-image
 ## Usage
 
 #### Import package and css
-```
+```js
 import UploadImage from 'tiptap-extension-upload-image';
 import 'tiptap-extension-upload-image/dist/upload-image.min.css';
 //Optional
@@ -20,7 +20,7 @@ import axios from 'axios';
 
 #### Register in editor extensions
 
-```
+```js
 extensions: [
   StarterKit,
   UploadImage.configure({
@@ -33,7 +33,7 @@ extensions: [
 
 This function is used to upload images using axios or the manager of your preference. It should return a string with the image URL in case of success. In case of an error, it should throw an exception. I am sending this function in the extension's configuration.
 
-```
+```js
 const uploadFn = (file) => {
     var formData = new FormData();
     formData.append("image", file);
@@ -52,7 +52,7 @@ const uploadFn = (file) => {
 
 Add this line to your button to open the input type file to select image.
 
-```
+```js
 editor.chain().focus().addImage().run()
 ```
 
@@ -60,7 +60,7 @@ editor.chain().focus().addImage().run()
 
 You can overwrite the color of spinner.
 
-```
+```css
 .image-uploading::before {
     border-top-color: #1e986c;
 }
