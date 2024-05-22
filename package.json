@@ -1,12 +1,10 @@
 {
   "name": "tiptap-extension-upload-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "files": [
-    "dist"
-  ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && rollup -c",
@@ -19,12 +17,17 @@
     "@tiptap/pm": "^2.0.0-beta.220",
     "rollup": "^3.17.3",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.6.3",
-    "sass": "^1.66.1"
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.5",
+    "sass": "^1.66.1",
+    "rollup-plugin-scss": "^3.0.0"
   },
   "peerDependencies": {
     "@tiptap/core": "^2.0.0-beta.220",
     "@tiptap/pm": "^2.0.0-beta.220"
+  },
+  "dependencies": {
+    "@tiptap/extension-image": "^2.4.0"
   }
 }
